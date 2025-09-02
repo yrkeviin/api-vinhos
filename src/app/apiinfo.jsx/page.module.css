@@ -1,0 +1,21 @@
+.page {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+}
+
+.text {
+    margin-top: 1.5rem;
+    color: #444;
+}

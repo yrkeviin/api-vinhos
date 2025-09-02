@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.avatar {
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+
+.name {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.quote {
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}

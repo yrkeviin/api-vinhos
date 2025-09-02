@@ -1,0 +1,30 @@
+.page {
+    padding: 2rem;
+    text-align: center;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.imageBig {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 0.8rem;
+    margin: 0 auto 1.5rem;
+    display: block;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.text {
+    color: #555;
+}
