@@ -33,7 +33,7 @@ export default function Home() {
           </ul>
         </div>
 
-        <div>
+        <div className={styles.botao}>
           <button>Ir Para Home</button>
         </div>
       </div>
