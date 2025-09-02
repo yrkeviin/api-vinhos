@@ -1,27 +1,41 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
+import Header from "../components/Header/Header";
 
 export default function Home() {
   return (
     <main className={styles.container}>
-      <Image
-        src="/avatar.png"
-        alt="Foto do aluno"
-        width={120}
-        height={120}
-        className={styles.avatar}
-      />
-      <h1 className={styles.title}>Turma DS2025</h1>
-      <h2 className={styles.subtitle}>Escola SENAI / SESI</h2>
-      <h3 className={styles.name}>Kevin Lima</h3>
-      <p className={styles.quote}>
-        “O sucesso é a soma de pequenos esforços repetidos dia após dia.” 💡
-      </p>
 
-      <div className={styles.links}>
-        <Link href="/apiinfo">Sobre a API</Link>
-        <Link href="/wines">Lista de Vinhos</Link>
+      <div className={styles.perfil}>
+        <div className={styles.avatar}>
+          <img src="/images/kevinPerf.jpg" alt="Avatar de Kevin" />
+        </div>
+
+        <div className={styles.info}>
+          <h1>Kevin E. Lima</h1>
+          <p>2TDS1 - SENAI Valinhos</p>
+          <h3>✨ "O sucesso é a soma de pequenos esforços repetidos dia após dia." ✨</h3>
+        </div>
+
+        <div className={styles.redesSociais}>
+          <ul>
+            <li>
+              <Link href="https://www.linkedin.com/in/kevin-e-lima/" target="_blank">
+                <img src="/icons/linkedin.svg" alt="LinkedIn"/>
+              </Link>
+            </li>
+            <li>
+              <Link href="https://github.com/kevinalmeida" target="_blank">
+                <img src="/icons/github.svg" alt="GitHub"/>
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <button>Ir Para Home</button>
+        </div>
       </div>
     </main>
   );
