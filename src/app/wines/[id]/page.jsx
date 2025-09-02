@@ -13,7 +13,7 @@ export default function WineDetails() {
 
     useEffect(() => {
     axios.get(`https://api.sampleapis.com/wines/reds/${id}`)
-        then((res) => setVinho(res.data))
+        .then((res) => setVinho(res.data))
         .catch(() => {
         toast.error("Erro ao carregar detalhes do vinho!");
         });
