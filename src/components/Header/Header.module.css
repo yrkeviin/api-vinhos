@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&display=swap');
 
 .header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(196, 196, 196);
+    background-color: aliceblue;
     justify-content: center;
-    height: 12vh;
+    height: 16vh;
 }
 
 .title {
@@ -16,8 +17,10 @@
     align-items: center;
     padding: .31rem 0;
     background-color: rgb(80, 80, 80);
+    color: white;
+    font-size: 2.15rem;
     width: 100%;
-    font-family: "Shadows Into Light", cursive;
+    font-family: "Mozilla Headline", sans-serif;
 }
 
 .nav {
@@ -27,6 +30,19 @@
 .nav ul {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
     font-family: "Lora", serif;
+}
+
+.nav ul a {
+    color: black;
+    text-decoration: none;
+    border-bottom: 1.5px solid transparent;
+    transition: .3s ease-in-out;
+}
+
+.nav ul a:hover {
+    color: rgb(161, 161, 161);
+    border-bottom: 1.5px solid rgb(161, 161, 161 );
+    transition: .3s ease-in-out;
 }

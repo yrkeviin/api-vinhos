@@ -1,0 +1,57 @@
+.loadingContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #ffffff, #ffffff, #ffffff);
+}
+
+.loadingContent {
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.loadingImage {
+    width: 8rem;
+    height: 8rem;
+    margin: 0 auto;
+    animation: spin 2s linear infinite;
+}
+
+.loadingText {
+    color: rgb(0, 0, 0);
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    font-family: "Arial", sans-serif;
+    animation: pulse 1.5s infinite;
+}
+
+/* Animação de rotação */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animação de pulsação */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

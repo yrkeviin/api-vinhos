@@ -4,19 +4,36 @@ import axios from "axios";
 import Link from "next/link";
 import styles from "./page.module.css";
 import Header from "../../components/Header/Header";
+import Loading from "../../components/Loading/Loading";
 
 export default function WinesPage() {
     const [vinhos, setVinhos] = useState([]);
+    const [isLoading, setIsLoading] = useState(true); // Inicializa como true
 
     useEffect(() => {
-    axios.get("https://api.sampleapis.com/wines/reds")
-        .then((res) => setVinhos(res.data))
-        .catch((err) => console.error("Erro:", err));
+        axios
+            .get("https://api.sampleapis.com/wines/reds")
+            .then((res) => {
+                setVinhos(res.data); // Define os dados dos vinhos
+                setIsLoading(false); // Define isLoading como false após carregar
+            })
+            .catch((err) => {
+                console.error("Erro:", err);
+                setIsLoading(false); // Mesmo em caso de erro, para o carregamento
+            });
     }, []);
+
+    if (isLoading) {
+        return <Loading />;
+    }
 
     return (
     <main className={styles.page}>
         <Header />
+
+        <div className={styles.banner}>
+            <img src="/images/Do campo à sua taça qualidade que inspira confiança.png" alt="" />
+        </div>
 
         <div className={styles.grid}>
         {vinhos.map((vinho) => (
