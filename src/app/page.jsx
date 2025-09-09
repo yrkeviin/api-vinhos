@@ -32,7 +32,7 @@ export default function Home() {
         </div>
 
         <div className={styles.botao}>
-          <a href="/home"><button>Ir Para Home</button></a>
+          <a href="/wines"><button>Ir Para Home</button></a>
         </div>
       </div>
     </div>

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Link from "next/link";
 import styles from "./page.module.css";
+import Header from "../../components/Header/Header";
 
 export default function WinesPage() {
     const [vinhos, setVinhos] = useState([]);
@@ -15,7 +16,8 @@ export default function WinesPage() {
 
     return (
     <main className={styles.page}>
-        <h1 className={styles.title}>Lista de Vinhos Tintos</h1>
+        <Header />
+
         <div className={styles.grid}>
         {vinhos.map((vinho) => (
             <div key={vinho.id} className={styles.card}>

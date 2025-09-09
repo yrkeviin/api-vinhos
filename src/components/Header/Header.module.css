@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(196, 196, 196);
+    justify-content: center;
+    height: 12vh;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .31rem 0;
+    background-color: rgb(80, 80, 80);
+    width: 100%;
+    font-family: "Shadows Into Light", cursive;
+}
+
+.nav {
+    margin-top: .5rem;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    font-family: "Lora", serif;
+}
