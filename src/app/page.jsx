@@ -1,11 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
-import Header from "../components/Header/Header";
 
 export default function Home() {
   return (
-    <main className={styles.container}>
+    <div className={styles.container}>
 
       <div className={styles.perfil}>
         <div className={styles.avatar}>
@@ -26,7 +24,7 @@ export default function Home() {
               </Link>
             </li>
             <li>
-              <Link href="https://github.com/kevinalmeida" target="_blank">
+              <Link href="https://github.com/yrkeviin" target="_blank">
                 <img src="/icons/github.svg" alt="GitHub"/>
               </Link>
             </li>
@@ -34,9 +32,9 @@ export default function Home() {
         </div>
 
         <div className={styles.botao}>
-          <button>Ir Para Home</button>
+          <a href="/home"><button>Ir Para Home</button></a>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

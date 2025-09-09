@@ -6,20 +6,28 @@
     align-items: center;
     text-align: center;
     padding: 2rem;
-    background-image: url(../../public/images/fundoHome.jpg);
-    background-size: cover;
-    background-position: center;
+    background-color: aliceblue;
     height: 100vh;
+    padding: 5rem 15rem;
 }
 
 .perfil {
-    background-color: rgb(238, 238, 238);
+    background-color: rgba(168, 168, 168, 0.568);
     padding: 5rem;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
     width: 60%;
+    transition: .3s ease-in-out;
+}
+
+.perfil:hover {
+    border-radius: 25px;
+    transition: .3s ease-in-out;
+    background-color: rgba(168, 168, 168, 0.774);
 }
 
 .avatar img {
-    width: 20%;
+    width: 23%;
     border-radius: 10%;
     transition: .3s ease-in-out;
 }
@@ -28,7 +36,7 @@
     width: 20%;
     border-radius: 50%;
     transition: .3s ease-in-out;
-    scale: .9;
+    scale: 1.1;
 }
 
 .info {
@@ -41,7 +49,7 @@
 }
 
 .redesSociais {
-    width: 9%;
+    width: 11%;
     margin: auto;
     margin-top: 1.7rem;
 }
@@ -63,15 +71,16 @@
     transition: .3s ease-in-out;
 }
 
-.botao {
+.botao a {
     display: flex;
     justify-content: center;
     margin-top: 1.7rem;
+    text-decoration: none;
 }
 
 .botao button {
-    width: 13%;
-    height: 2rem;
+    width: 18%;
+    height: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
