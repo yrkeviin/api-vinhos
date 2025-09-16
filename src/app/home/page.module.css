@@ -1,0 +1,117 @@
+.menu {
+    display: flex;
+    background-color: aliceblue;
+    border: 1px solid black;
+    width: 55%;
+    height: 600px;
+    justify-content: space-around;
+    margin: 0 auto 2rem auto;
+}
+
+.card, .card2, .card3, .card4 {
+    border: 1px solid black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Pseudo-elementos para as imagens de fundo */
+.card::before,
+.card2::before,
+.card3::before,
+.card4::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Garantir que o texto fique acima da imagem */
+.card h1, .card p,
+.card2 h1, .card2 p,
+.card3 h1, .card3 p,
+.card4 h1, .card4 p {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+/* Definir as imagens para cada card */
+.card::before {
+    background-image: url(/images/fundoHome1.jpg);
+}
+
+.card2::before {
+    background-image: url(/images/garota-bonita.jpg);
+}
+
+.card3::before {
+    background-image: url(/images/porSol.jpg);
+}
+
+.card4::before {
+    background-image: url(/images/fundoHome.jpg);
+}
+
+/* Efeitos de hover */
+.card:hover::before,
+.card2:hover::before,
+.card3:hover::before,
+.card4:hover::before {
+    opacity: 1;
+}
+
+/* Opcional: adicionar um efeito de escala suave */
+.card:hover,
+.card2:hover,
+.card3:hover,
+.card4:hover {
+    transform: scale(1.02);
+}
+
+/* Opcional: adicionar overlay escuro para melhor legibilidade do texto */
+.card::after,
+.card2::after,
+.card3::after,
+.card4::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.card:hover::after,
+.card2:hover::after,
+.card3:hover::after,
+.card4:hover::after {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Garantir que o texto tenha cor contrastante no hover */
+.card:hover h1, .card:hover p,
+.card2:hover h1, .card2:hover p,
+.card3:hover h1, .card3:hover p,
+.card4:hover h1, .card4:hover p {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    transition: color 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
+}

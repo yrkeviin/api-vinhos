@@ -22,7 +22,7 @@ export default function WineDetails() {
     if (!vinho) return <p className={styles.text}>Carregando...</p>;
 
     return (
-    <main className={styles.page}>
+    <div className={styles.page}>
         <ToastContainer />
         <img src={vinho.image} alt={vinho.wine} className={styles.imageBig} />
         <h1 className={styles.title}>{vinho.wine}</h1>
@@ -34,6 +34,6 @@ export default function WineDetails() {
             <Link href="/wines">Voltar à lista</Link>
             <Link href="/">Voltar à Home</Link>
         </div>
-    </main>
+    </div>
     );
 }
