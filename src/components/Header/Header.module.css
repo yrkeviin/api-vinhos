@@ -1,37 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap');
 
 .header {
     display: flex;
-    flex-direction: column;
+    background-color: #f8f3ef;
+    height: 10vh;
     align-items: center;
-    background-color: aliceblue;
-    justify-content: center;
-    height: 16vh;
 }
 
-.title {
+.logo {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: .31rem 0;
-    background-color: rgb(80, 80, 80);
-    color: white;
-    font-size: 2.15rem;
+    background-color: #f8f3ef;
     width: 100%;
-    font-family: "Mozilla Headline", sans-serif;
+    justify-content: center;
+    margin-right: 16%
+}
+
+.logo img {
+    width: 15%;
 }
 
 .nav {
-    margin-top: .5rem;
+    margin-left: 5%;
 }
 
 .nav ul {
     list-style: none;
     display: flex;
     gap: 2.5rem;
-    font-family: "Lora", serif;
+    font-family: "Alan Sans", sans-serif;
+    justify-content: center;
 }
 
 .nav ul a {
@@ -39,6 +39,8 @@
     text-decoration: none;
     border-bottom: 1.5px solid transparent;
     transition: .3s ease-in-out;
+    display: flex;
+    color: #d1c3b5
 }
 
 .nav ul a:hover {
