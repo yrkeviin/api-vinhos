@@ -26,7 +26,6 @@
     animation: pulse 1.5s infinite;
 }
 
-/* Animação de rotação */
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -36,7 +35,6 @@
     }
 }
 
-/* Animação de pulsação */
 @keyframes pulse {
     0%, 100% {
         opacity: 1;
@@ -46,7 +44,6 @@
     }
 }
 
-/* Animação de fade-in */
 @keyframes fadeIn {
     from {
         opacity: 0;

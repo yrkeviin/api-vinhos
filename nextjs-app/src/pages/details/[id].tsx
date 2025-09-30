@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Header from '../../components/Header';
 import { fetchItemDetails } from '../../utils/api';
+import styles from './[id].module.css';
 
 const DetailsPage = () => {
   const router = useRouter();
@@ -27,25 +28,47 @@ const DetailsPage = () => {
     }
   }, [id]);
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
-  if (!item) return <div>Item not found</div>;
+  if (loading) return (
+    <div className={styles.page}>
+      <Header />
+      <div className={styles.loading}>Carregando detalhes do vinho...</div>
+    </div>
+  );
+  
+  if (error) return (
+    <div className={styles.page}>
+      <Header />
+      <div className={styles.error}>Erro: {error}</div>
+    </div>
+  );
+  
+  if (!item) return (
+    <div className={styles.page}>
+      <Header />
+      <div className={styles.notFound}>Vinho não encontrado</div>
+    </div>
+  );
 
   return (
-    <div className="container mx-auto p-4">
+    <div className={styles.page}>
       <Header />
-      <div className="card">
-        <h1 className="text-2xl font-bold">{item.title}</h1>
-        <p>{item.description}</p>
-        {/* Render other item details here */}
-      </div>
-      <div className="mt-4">
-        <button onClick={() => router.push('/listing')} className="btn">
-          Voltar à Listagem
-        </button>
-        <button onClick={() => router.push('/')} className="btn">
-          Voltar à Página Inicial
-        </button>
+      <div className={styles.container}>
+        <div className={styles.card}>
+          <h1 className={styles.title}>{item.wine}</h1>
+          <p className={styles.description}>
+            <strong>Vinícola:</strong> {item.winery}<br/>
+            <strong>Localização:</strong> {item.location}<br/>
+            {item.rating && <><strong>Avaliação:</strong> {item.rating.average}/5 ({item.rating.reviews} avaliações)</>}
+          </p>
+          <div className={styles.buttonContainer}>
+            <button onClick={() => router.push('/listing')} className={styles.btn}>
+              Voltar à Listagem
+            </button>
+            <button onClick={() => router.push('/')} className={styles.btn}>
+              Voltar à Página Inicial
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

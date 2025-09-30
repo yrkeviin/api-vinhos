@@ -8,18 +8,18 @@ import Loading from "../../components/Loading/Loading";
 
 export default function WinesPage() {
     const [vinhos, setVinhos] = useState([]);
-    const [isLoading, setIsLoading] = useState(true); // Inicializa como true
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         axios
             .get("https://api.sampleapis.com/wines/reds")
             .then((res) => {
-                setVinhos(res.data); // Define os dados dos vinhos
-                setIsLoading(false); // Define isLoading como false após carregar
+                setVinhos(res.data);
+                setIsLoading(false);
             })
             .catch((err) => {
                 console.error("Erro:", err);
-                setIsLoading(false); // Mesmo em caso de erro, para o carregamento
+                setIsLoading(false);
             });
     }, []);
 
